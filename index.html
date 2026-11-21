@@ -8,6 +8,18 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="canonical" href="https://tavardt-italia.github.io/llm-robustness-evaluator-it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://tavardt-brasil.github.io/llm-robustness-evaluator-br/">
+  <link rel="alternate" hreflang="pt-PT" href="https://tavardt-portugal.github.io/llm-robustness-evaluator-pt/">
+  <link rel="alternate" hreflang="en-US" href="https://tavardt-usa.github.io/llm-robustness-evaluator-us/">
+  <link rel="alternate" hreflang="en-GB" href="https://tavardt-uk.github.io/llm-robustness-evaluator-uk/">
+  <link rel="alternate" hreflang="en-CA" href="https://tavardt-canada.github.io/llm-robustness-evaluator-ca/">
+  <link rel="alternate" hreflang="en-AU" href="https://tavardt-australia.github.io/llm-robustness-evaluator-au/">
+  <link rel="alternate" hreflang="en-NZ" href="https://tavardt-new-zealand.github.io/llm-robustness-evaluator-nz/">
+  <link rel="alternate" hreflang="es-ES" href="https://tavardt-espana.github.io/llm-robustness-evaluator-es/">
+  <link rel="alternate" hreflang="es-MX" href="https://tavardt-mexico.github.io/llm-robustness-evaluator-mx/">
+  <link rel="alternate" hreflang="fr-FR" href="https://tavardt-france.github.io/llm-robustness-evaluator-fr/">
+  <link rel="alternate" hreflang="it-IT" href="https://tavardt-italia.github.io/llm-robustness-evaluator-it/">
+  <link rel="alternate" hreflang="x-default" href="https://tavardt-usa.github.io/llm-robustness-evaluator-us/">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TAVARDT">
@@ -70,8 +82,54 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Valutatore di Robustezza de LLM",
+          "name": "Valutatore di Robustezza LLM",
           "item": "https://tavardt-italia.github.io/llm-robustness-evaluator-it/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tavardt-italia.github.io/llm-robustness-evaluator-it/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Cosa verifica il Valutatore di Robustezza LLM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esamina il system prompt contro vettori di attacco noti (iniezioni, jailbreak, violazioni di delimitatori), calcolando un indice di resilienza da 0 a 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cos'è l'iniezione diretta di prompt e perché è critica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "È una vulnerabilità per cui input ostili annullano i vincoli di sicurezza del modello, consentendo comportamenti non autorizzati ed esfiltrazione di logiche interne."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I miei system prompt vengono inviati a server esterni?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. L'analisi statica ed euristica avviene esclusivamente in memoria locale nel browser, senza alcun salvataggio di dati."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come strutturare guardrail difensivi in Python o TypeScript?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Implementando middleware che convalidano gli input prima della chiamata all'LLM, applicando delimitatori XML rigidi e filtrando pattern malevoli."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In che modo TAVARDT protegge gli LLM in produzione?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'ingegneria di TAVARDT progetta architetture difensive avanzate: guardrail semantici a bassissima latenza, sanitizzazione Cloudflare ed audit continui."
+          }
         }
       ]
     }
@@ -482,6 +540,151 @@ textarea:focus, input[type="text"]:focus {
   color: #64748b !important;
 }
 
+
+/* ==========================================================================
+   TAVARDT UNIFIED 1200PX CONTAINER ALIGNMENT & AEO/GEO/FAQ DESIGN TOKENS
+   ========================================================================== */
+.container, .main-wrap, main, .tavardt-hero, .hero {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  box-sizing: border-box !important;
+}
+.card, .main-card, .panel, .stage-card, .results-section, .workspace-grid {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.aeo-card {
+  width: 100% !important;
+  background: #0e1526 !important;
+  border: 1px solid rgba(30, 0, 255, 0.3) !important;
+  border-left: 4px solid #1e00ff !important;
+  border-radius: 16px !important;
+  padding: 28px 32px !important;
+  margin: 32px 0 !important;
+  box-sizing: border-box !important;
+}
+.aeo-card h2 {
+  font-size: 1.2rem !important;
+  color: #ffffff !important;
+  margin-bottom: 12px !important;
+  font-weight: 700 !important;
+}
+.aeo-card p {
+  font-size: 0.98rem !important;
+  color: #cbd5e1 !important;
+  line-height: 1.7 !important;
+}
+.vectors-section {
+  width: 100% !important;
+  margin: 32px 0 !important;
+  box-sizing: border-box !important;
+}
+.vectors-section h2 {
+  font-size: 1.25rem !important;
+  color: #ffffff !important;
+  margin-bottom: 18px !important;
+  font-weight: 700 !important;
+}
+.vectors-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 16px !important;
+  width: 100% !important;
+}
+.vector-card {
+  background: #0b101e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 22px !important;
+  box-sizing: border-box !important;
+}
+.vector-title {
+  font-size: 0.96rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 8px !important;
+}
+.vector-desc {
+  font-size: 0.88rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.5 !important;
+}
+.faq-section {
+  width: 100% !important;
+  margin: 36px 0 !important;
+  box-sizing: border-box !important;
+}
+.faq-section h2 {
+  font-size: 1.25rem !important;
+  color: #ffffff !important;
+  margin-bottom: 18px !important;
+  font-weight: 700 !important;
+}
+.faq-item {
+  background: #0b101e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  margin-bottom: 14px !important;
+  padding: 18px 24px !important;
+  transition: border-color 0.2s !important;
+  box-sizing: border-box !important;
+}
+.faq-item[open] {
+  border-color: rgba(30, 0, 255, 0.4) !important;
+}
+.faq-question {
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  font-size: 0.96rem !important;
+  color: #ffffff !important;
+  outline: none !important;
+}
+.faq-answer {
+  margin-top: 12px !important;
+  font-size: 0.92rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.6 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding-top: 12px !important;
+}
+.cta-card {
+  width: 100% !important;
+  background: linear-gradient(135deg, rgba(30, 0, 255, 0.2) 0%, rgba(11, 16, 30, 0.9) 100%) !important;
+  border: 1px solid rgba(30, 0, 255, 0.4) !important;
+  border-radius: 16px !important;
+  padding: 36px 32px !important;
+  text-align: center !important;
+  margin: 36px 0 !important;
+  box-sizing: border-box !important;
+}
+.cta-card h3 { font-size: 1.35rem !important; font-weight: 800 !important; margin-bottom: 10px !important; color: #ffffff !important; }
+.cta-card p { color: #94a3b8 !important; max-width: 720px !important; margin: 0 auto 24px !important; font-size: 0.98rem !important; }
+.cta-btns { display: flex !important; gap: 16px !important; justify-content: center !important; flex-wrap: wrap !important; }
+.btn-wa {
+  background: #1e00ff !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  padding: 14px 32px !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 0 25px rgba(30, 0, 255, 0.6) !important;
+  transition: all 0.2s !important;
+  display: inline-block !important;
+}
+.btn-wa:hover { transform: translateY(-2px) !important; box-shadow: 0 0 35px rgba(30, 0, 255, 0.9) !important; }
+.btn-corp {
+  background: #0b101e !important;
+  color: #f8fafc !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  padding: 14px 28px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: inline-block !important;
+}
 </style>
 </head>
 <body>
@@ -550,6 +753,70 @@ textarea:focus, input[type="text"]:focus {
     </div>
     <div class="tab-panel" id="tab-sp">
       <pre id="code-sp"></pre>
+    </div>
+  </div>
+
+  <!-- AEO CITABLE DEFINITION SECTION (100% WIDTH - 1200px) -->
+  <section class="aeo-card">
+    <h2>Che cos'è il Valutatore di Robustezza LLM?</h2>
+    <p>Il Valutatore di Robustezza LLM di TAVARDT è uno strumento difensivo interattivo sviluppato per testare la resilienza di system prompt e guardrail contro iniezioni dirette di prompt, jailbreak, estrazione di istruzioni interne ed evasioni strutturali. Esegue verifiche deterministiche e genera blueprint di hardening in Python e TypeScript conformi a OWASP Top 10 per LLM.</p>
+  </section>
+
+  <!-- GEO TECHNICAL VECTORS SECTION (100% WIDTH - 1200px) -->
+  <section class="vectors-section">
+    <h2>Vettori di Rischio e Vulnerabilità Esaminate</h2>
+    <div class="vectors-grid">
+      <div class="vector-card">
+        <h3 class="vector-title">Iniezione Diretta di Prompt</h3>
+        <p class="vector-desc">Tentativi di sovrascrittura delle direttive di sistema mediante comandi contraddittori inseriti dall'utente.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Collisione ed Evasione da Delimitatori</h3>
+        <p class="vector-desc">Sfruttamento di tag Markdown o XML per rompere il contesto operativo e assumere il controllo del modello.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Esfiltrazione del System Prompt</h3>
+        <p class="vector-desc">Tecniche di social engineering mirate a indurre il modello a rivelare le proprie istruzioni confidenziali.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Evasione dei Vincoli di Dominio</h3>
+        <p class="vector-desc">Comandi studiati per costringere l'LLM a operare al di fuori del perimetro aziendale o etico stabilito.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AEO/GEO FAQ SECTION (100% WIDTH - EXACTLY 5 FAQS) -->
+  <section class="faq-section">
+    <h2>Domande Frequenti (FAQ) e Linee Guida di Sicurezza</h2>
+      <details class="faq-item">
+        <summary class="faq-question">Cosa verifica il Valutatore di Robustezza LLM?</summary>
+        <div class="faq-answer">Esamina il system prompt contro vettori di attacco noti (iniezioni, jailbreak, violazioni di delimitatori), calcolando un indice di resilienza da 0 a 100.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Cos'è l'iniezione diretta di prompt e perché è critica?</summary>
+        <div class="faq-answer">È una vulnerabilità per cui input ostili annullano i vincoli di sicurezza del modello, consentendo comportamenti non autorizzati ed esfiltrazione di logiche interne.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">I miei system prompt vengono inviati a server esterni?</summary>
+        <div class="faq-answer">No. L'analisi statica ed euristica avviene esclusivamente in memoria locale nel browser, senza alcun salvataggio di dati.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Come strutturare guardrail difensivi in Python o TypeScript?</summary>
+        <div class="faq-answer">Implementando middleware che convalidano gli input prima della chiamata all'LLM, applicando delimitatori XML rigidi e filtrando pattern malevoli.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">In che modo TAVARDT protegge gli LLM in produzione?</summary>
+        <div class="faq-answer">L'ingegneria di TAVARDT progetta architetture difensive avanzate: guardrail semantici a bassissima latenza, sanitizzazione Cloudflare ed audit continui.</div>
+      </details>
+  </section>
+
+  <!-- DEFENSIVE HARDENING CTA -->
+  <div class="cta-card">
+    <h3>Hai Bisogno di Blindatura Professionale per i Tuoi LLM?</h3>
+    <p>Il team di ingegneria di TAVARDT sviluppa middleware difensivi, confini semantici e perimetri Zero Trust per sistemi di IA aziendali.</p>
+    <div class="cta-btns">
+      <a class="btn-wa" href="https://wa.me/5584987721775?text=Buongiorno%20Sofia%2C%20ho%20eseguito%20il%20Valutatore%20di%20Robustezza%20LLM%20e%20rilevato%20criticit%C3%A0%20nel%20mio%20prompt.%20Desidero%20supporto%20tecnico%20per%20la%20blindatura." target="_blank">Contatto Diretto con Sofia (WhatsApp)</a>
+      <a class="btn-corp" href="https://ag.tavardt.com/it/sicurezza-informatica/" target="_blank" rel="noopener">Scopri i Servizi di Sicurezza</a>
     </div>
   </div>
 </main>
