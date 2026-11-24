@@ -131,7 +131,7 @@ def main():
     parser = argparse.ArgumentParser(description="Valutatore Difensivo di Robustezza LLM | TAVARDT — Italia")
     parser.add_argument("--prompt", "-p", type=str, default=None,
                         help="System prompt text to audit")
-    parser.add_argument("--file", "-f", type=str, default=None,
+    parser.add_argument("-file", "--file", "-f", type=str, default=None,
                         help="Path to a text file containing the system prompt")
     parser.add_argument("--version", action="version", version=f"%(prog)s {TOOL_VERSION}")
     args = parser.parse_args()
