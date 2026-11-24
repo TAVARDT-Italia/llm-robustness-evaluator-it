@@ -11,7 +11,7 @@
 
 Strumento interattivo e CLI difensivo per sviluppatori che valutano la robustezza dei guardrail LLM contro vettori di iniezione, perdita di prompt e attacchi strutturali. Punteggio di Resilienza 0-100 + blueprint difensivo.
 
----
+***
 
 ## Panoramica
 
@@ -20,14 +20,14 @@ Strumento interattivo e CLI difensivo per sviluppatori che valutano la robustezz
 ## 5 Vettori di Test Difensivi
 
 | # | Vector | Coverage |
-|---|--------|----------|
+|-|-|-|
 | 1 | **Escape del Delimitatore**  -  Rileva token di controllo iniettati (`</system>`, `[/INST]`) | ✅ |
 | 2 | **Perdita del System Prompt**  -  Identifica pattern di estrazione delle istruzioni | ✅ |
 | 3 | **Sostituzione di Ruolo/Persona**  -  Verifica la resistenza alle sostituzioni (DAN, dev mode) | ✅ |
 | 4 | **Offuscamento Strutturale**  -  Valuta la copertura contro Base64, leetspeak, omoglifi | ✅ |
 | 5 | **Iniezione Indiretta di Contesto**  -  Simula un documento RAG con payload incorporato | ✅ |
 
----
+***
 
 ## Strumento Online
 
@@ -35,7 +35,7 @@ Accedi allo strumento interattivo direttamente:
 
 🌐 **[https://tavardt-italia.github.io/llm-robustness-evaluator-it/](https://tavardt-italia.github.io/llm-robustness-evaluator-it/)**
 
----
+***
 
 ## Utilizzo via CLI
 
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 ### Esecuzione
 
 ```bash
-python llm_robustness_evaluator.py --prompt "You are a helpful assistant."
+python llm_robustness_evaluator.py -prompt "You are a helpful assistant."
 ```
 
 ```
@@ -62,7 +62,7 @@ Resilience Score: 85/100
 ⚠️  V5 Indirect Context Injection  -  WARNING
 ```
 
----
+***
 
 ## Architettura Difensiva
 
@@ -72,26 +72,26 @@ Il blueprint difensivo include:
 - 📦 Middleware TypeScript per API Next.js
 - 🔒 Template di System Prompt rinforzato con delimitatori immutabili
 
----
+***
 
 ## Portali Ufficiali
 
 Accedi alla rete ufficiale dei portali TAVARDT:
 
 | Portal | URL |
-|--------|-----|
-| Portale Ufficiale TAVARDT | [https://ag.tavardt.com/it/](https://ag.tavardt.com/it/) |
-| Centro Strumenti | [https://tools.tavardt.com/it/](https://tools.tavardt.com/it/) |
-| Contatto | [https://ag.tavardt.com/it/contact/](https://ag.tavardt.com/it/contact/) |
+|-|-|
+| Portale Ufficiale TAVARDT | [Portal Institucional](https://ag.tavardt.com/it/) |
+| Centro Strumenti | [Central de Ferramentas](https://tools.tavardt.com/it/) |
+| Contatto | [Canal de Contato](https://ag.tavardt.com/it/contact/) |
 | GitHub | [https://github.com/TAVARDT-Italia](https://github.com/TAVARDT-Italia) |
 
----
+***
 
 ## Licenza
 
 Licenza MIT  -  utilizzo libero per scopi difensivi ed educativi.
 
----
+***
 
 <p align="center">
   <strong>TAVARDT  -  Italia</strong><br>
