@@ -1,4 +1,3 @@
-
 # Valutatore di Robustezza LLM & Tester di Guardrail
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-00ff88?style=flat-square&logo=github)](https://tavardt-italia.github.io/llm-robustness-evaluator-it/)
@@ -74,12 +73,17 @@ Il blueprint difensivo include:
 
 ***
 
-
-***
-
 ## Licenza
 
 Licenza MIT  -  utilizzo libero per scopi difensivi ed educativi.
+
+***
+
+## Link Utili
+
+* **Portale Aziendale:** https://ag.tavardt.com/it/
+* **Suite di Diagnostica:** https://tools.tavardt.com/it/
+* **Contatto Tecnico:** https://ag.tavardt.com/it/contatto/
 
 ***
 
